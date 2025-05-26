@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proend_uz</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="logo">LOGO</div>
+      </div>
+
+      <ul class="navbar-menu">
+        <li><a href="#" class="active">Курсы</a></li>
+        <li><a href="#">Школы</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Акции школ</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="notifications">
+          <i class="fas fa-bell"></i>
+        </div>
+
+        <div class="search">
+          <i class="fas fa-magnifying-glass"></i>
+          <input type="text" placeholder="Искать курсы" />
+        </div>
+      </div>
+    </nav>
+    <!-- AGGREGATOR SECTION -->
+    <section class="aggregator">
+      <div class="aggregator-left">
+        <h2>Агрегатор онлайн-курсов</h2>
+        <p>
+          Сравниваем онлайн-курсы по digital и IT. <br />
+          Мы — каталог-отзовик курсов. Выбирайте курсы по отзывам, <br />
+          цене, продолжительности и другим критериям!
+        </p>
+      </div>
+      <div class="aggregator-right">
+        <img src="./images/person_pc.png" alt="Laptop image" />
+      </div>
+    </section>
+
+    <div id="benefits-placeholder"></div>
+    <div id="courses-placeholder"></div>
+
+    <!-- Schools Carousel Section -->
+    <section class="schools-section">
+      <div class="schools-container">
+        <h2>Школы</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">
+            &#10094;
+          </button>
+          <div class="carousel">
+            <div class="carousel-item">
+              <img src="./icons/netology-logo.svg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="./icons/l5_montazhnaya.svg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="./icons/otus.svg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="./icons/geekbrains.svg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="./icons/netology-logo.svg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="./icons/netology-logo.svg" alt="" />
+            </div>
+          </div>
+          <button class="carousel-btn next" onclick="moveSlide(1)">
+            &#10095;
+          </button>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Container -->
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px;
+      "
+    >
+      <h2>Популярные онлайн-курсы</h2>
+    </div>
+    <div class="tabs-container">
+      <button class="tab-button" data-tab="programming">
+        Программирование
+      </button>
+      <button class="tab-button" data-tab="marketing">Маркетинг</button>
+      <button class="tab-button active" data-tab="design">Дизайн</button>
+      <button class="tab-button" data-tab="analytics">Аналитика</button>
+      <button class="tab-button" data-tab="finance">Финансы</button>
+      <button class="tab-button" data-tab="management">Управление</button>
+      <button class="tab-button" data-tab="content">Контент-маркетинг</button>
+      <button class="tab-button" data-tab="languages">Иностранные языки</button>
+    </div>
+    <div class="container">
+      <div class="course-card">
+        <div class="course-left">
+          <div class="course-info">
+            <div>
+              <h3 class="course-title">Профессия<br />веб-разработчик</h3>
+            </div>
+            <div class="course-provider">
+              <div>
+                <span>Skillbox</span>
+              </div>
+              <div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="rating-text">4.5</span>
+                </div>
+                <span class="reviews">Отзывы о школе 58</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-details">
+          <div class="price-section">
+            <div class="original-price">85 000 руб</div>
+            <div class="current-price">66 800 руб</div>
+            <div class="monthly-price">от 4 745 руб/месяц</div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/time.svg" alt="logo" />
+              <span>В любое время</span>
+            </div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>3 месяца</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/card.svg" alt="logo" />
+              <span>Начальный</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/bag.svg" alt="logo" />
+              <span>Стажировка</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>Диплом</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn-primary">На сайт курса</button>
+          <button class="btn-secondary">Подробнее</button>
+          <a href="#" class="compare-link">
+            <img src="./icons/card_icons/shuffle.svg" alt="" />
+            Добавить к сравнению
+          </a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-left">
+          <div class="course-info">
+            <div>
+              <h3 class="course-title">Профессия<br />веб-разработчик</h3>
+            </div>
+            <div class="course-provider">
+              <div>
+                <span>Skillbox</span>
+              </div>
+              <div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="rating-text">4.5</span>
+                </div>
+                <span class="reviews">Отзывы о школе 58</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-details">
+          <div class="price-section">
+            <div class="original-price">85 000 руб</div>
+            <div class="current-price">66 800 руб</div>
+            <div class="monthly-price">от 4 745 руб/месяц</div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/time.svg" alt="logo" />
+              <span>В любое время</span>
+            </div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>3 месяца</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/card.svg" alt="logo" />
+              <span>Начальный</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/bag.svg" alt="logo" />
+              <span>Стажировка</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>Диплом</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn-primary">На сайт курса</button>
+          <button class="btn-secondary">Подробнее</button>
+          <a href="#" class="compare-link">
+            <img src="./icons/card_icons/shuffle.svg" alt="" />
+            Добавить к сравнению
+          </a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-left">
+          <div class="course-info">
+            <div>
+              <h3 class="course-title">Профессия<br />веб-разработчик</h3>
+            </div>
+            <div class="course-provider">
+              <div>
+                <span>Skillbox</span>
+              </div>
+              <div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="rating-text">4.5</span>
+                </div>
+                <span class="reviews">Отзывы о школе 58</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-details">
+          <div class="price-section">
+            <div class="original-price">85 000 руб</div>
+            <div class="current-price">66 800 руб</div>
+            <div class="monthly-price">от 4 745 руб/месяц</div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/time.svg" alt="logo" />
+              <span>В любое время</span>
+            </div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>3 месяца</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/card.svg" alt="logo" />
+              <span>Начальный</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/bag.svg" alt="logo" />
+              <span>Стажировка</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>Диплом</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn-primary">На сайт курса</button>
+          <button class="btn-secondary">Подробнее</button>
+          <a href="#" class="compare-link">
+            <img src="./icons/card_icons/shuffle.svg" alt="" />
+            Добавить к сравнению
+          </a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-left">
+          <div class="course-info">
+            <div>
+              <h3 class="course-title">Профессия<br />веб-разработчик</h3>
+            </div>
+            <div class="course-provider">
+              <div>
+                <span>Skillbox</span>
+              </div>
+              <div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="rating-text">4.5</span>
+                </div>
+                <span class="reviews">Отзывы о школе 58</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-details">
+          <div class="price-section">
+            <div class="original-price">85 000 руб</div>
+            <div class="current-price">66 800 руб</div>
+            <div class="monthly-price">от 4 745 руб/месяц</div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/time.svg" alt="logo" />
+              <span>В любое время</span>
+            </div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>3 месяца</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/card.svg" alt="logo" />
+              <span>Начальный</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/bag.svg" alt="logo" />
+              <span>Стажировка</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>Диплом</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn-primary">На сайт курса</button>
+          <button class="btn-secondary">Подробнее</button>
+          <a href="#" class="compare-link">
+            <img src="./icons/card_icons/shuffle.svg" alt="" />
+            Добавить к сравнению
+          </a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-left">
+          <div class="course-info">
+            <div>
+              <h3 class="course-title">Профессия<br />веб-разработчик</h3>
+            </div>
+            <div class="course-provider">
+              <div>
+                <span>Skillbox</span>
+              </div>
+              <div>
+                <div class="rating">
+                  <span class="star">★</span>
+                  <span class="rating-text">4.5</span>
+                </div>
+                <span class="reviews">Отзывы о школе 58</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-details">
+          <div class="price-section">
+            <div class="original-price">85 000 руб</div>
+            <div class="current-price">66 800 руб</div>
+            <div class="monthly-price">от 4 745 руб/месяц</div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/time.svg" alt="logo" />
+              <span>В любое время</span>
+            </div>
+          </div>
+
+          <div class="course-meta">
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>3 месяца</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/card.svg" alt="logo" />
+              <span>Начальный</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/bag.svg" alt="logo" />
+              <span>Стажировка</span>
+            </div>
+            <div class="meta-item">
+              <img src="./icons/card_icons/title.svg" alt="logo" />
+              <span>Диплом</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn-primary">На сайт курса</button>
+          <button class="btn-secondary">Подробнее</button>
+          <a href="#" class="compare-link">
+            <img src="./icons/card_icons/shuffle.svg" alt="" />
+            Добавить к сравнению
+          </a>
+        </div>
+      </div>
+
+      <div class="more-button-wrapper">
+        <button class="more-btn">Посмотреть еще</button>
+      </div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 80px 0px 0px 40px;
+      "
+    >
+      <h2>Блог</h2>
+    </div>
+    <div class="custom-card-list">
+      <div class="custom-course-item">
+        <span class="custom-badge">Онлайн курсы по маркетингу</span>
+        <div class="custom-image-block"></div>
+        <div class="custom-course-info">
+          <h3 class="custom-course-title">
+            Top-10 онлайн-курсов по интернет-маркетингу
+          </h3>
+          <div class="custom-course-footer">
+            <span class="custom-course-date">1 сентября</span>
+            <button class="custom-detail-btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-course-item">
+        <span class="custom-badge">Онлайн курсы по маркетингу</span>
+        <div class="custom-image-block"></div>
+        <div class="custom-course-info">
+          <h3 class="custom-course-title">
+            Top-10 онлайн-курсов по интернет-маркетингу
+          </h3>
+          <div class="custom-course-footer">
+            <span class="custom-course-date">1 сентября</span>
+            <button class="custom-detail-btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-course-item">
+        <span class="custom-badge">Онлайн курсы по маркетингу</span>
+        <div class="custom-image-block"></div>
+        <div class="custom-course-info">
+          <h3 class="custom-course-title">
+            Top-10 онлайн-курсов по интернет-маркетингу
+          </h3>
+          <div class="custom-course-footer">
+            <span class="custom-course-date">1 сентября</span>
+            <button class="custom-detail-btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <footer class="footer">
+        <div class="footer-column">
+          <h3>КАТЕГОРИИ</h3>
+          <ul>
+            <li>Программирование</li>
+            <li>Маркетинг</li>
+            <li>Дизайн</li>
+            <li>Управление</li>
+            <li>Контент-маркетинг</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>ШКОЛЫ</h3>
+          <ul>
+            <li>Skillbox</li>
+            <li>Geekbrains</li>
+            <li>Нетология</li>
+            <li>Skillfactory</li>
+            <li>Convertmonster</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>ОТЗЫВЫ О ШКОЛАХ</h3>
+          <ul>
+            <li>Отзывы о Skillbox</li>
+            <li>Отзывы о Geekbrains</li>
+            <li>Отзывы о Нетологии</li>
+            <li>Отзывы о Skillfactory</li>
+            <li>Отзывы о Convertmonster</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>КУРСЫ</h3>
+          <ul>
+            <li>С нуля</li>
+            <li>С трудоустройством</li>
+            <li>Платные</li>
+            <li>Бесплатные</li>
+            <li>Бесплатные по пасте стажа</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>УРОВНИ СЛОЖНОСТИ</h3>
+          <ul>
+            <li>Начинающий</li>
+            <li>Средний</li>
+            <li>Продвинутый</li>
+            <li>Для детей</li>
+          </ul>
+        </div>
+      </footer>
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <span>LOGO</span>
+          <p>© 2025, Все права защищены</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><img src="./icons/footer_icon/vk.svg" alt="VK" /></a>
+          <a href="#"
+            ><img src="./icons/footer_icon/instagram.svg" alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img src="./icons/footer_icon/facebook.svg" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="./icons/footer_icon/youtube.svg" alt="Youtube"
+          /></a>
+          <span>Поделиться сообществу</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("benefits.html")
+          .then((res) => res.text())
+          .then((data) => {
+            document.getElementById("benefits-placeholder").innerHTML = data;
+          });
+
+        fetch("courses_columns.html")
+          .then((res) => res.text())
+          .then((data) => {
+            document.getElementById("courses-placeholder").innerHTML = data;
+          });
+
+        initCarousel();
+      });
+
+      let currentSlide = 0;
+
+      function initCarousel() {
+        showSlide(currentSlide);
+      }
+
+      function showSlide(n) {
+        const carousel = document.querySelector(".carousel");
+        const totalItems = document.querySelectorAll(".carousel-item").length;
+        const visibleItems = 4;
+        const itemWidth = 100 / visibleItems;
+
+        if (n < 0) {
+          currentSlide = totalItems - visibleItems;
+        } else if (n > totalItems - visibleItems) {
+          currentSlide = 0;
+        } else {
+          currentSlide = n;
+        }
+
+        carousel.style.transform = `translateX(-${currentSlide * itemWidth}%)`;
+      }
+
+      function moveSlide(step) {
+        showSlide(currentSlide + step);
+      }
+
+      function goToSlide(n) {
+        showSlide(n);
+      }
+
+      setInterval(() => {
+        moveSlide(1);
+      }, 5000);
+
+      // courses view
+      document.addEventListener("DOMContentLoaded", function () {
+        const courseCards = document.querySelectorAll(".course-card");
+        const moreBtn = document.querySelector(".more-btn");
+
+        courseCards.forEach((card, index) => {
+          if (index >= 4) {
+            card.style.display = "none";
+          }
+        });
+        moreBtn.addEventListener("click", function () {
+          courseCards.forEach((card) => {
+            card.style.display = "flex";
+          });
+          moreBtn.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
